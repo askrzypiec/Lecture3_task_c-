@@ -1,0 +1,14 @@
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\bin\Debug\net8.0\Lectue3_task.exe
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\bin\Debug\net8.0\Lectue3_task.deps.json
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\bin\Debug\net8.0\Lectue3_task.runtimeconfig.json
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\bin\Debug\net8.0\Lectue3_task.dll
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\bin\Debug\net8.0\Lectue3_task.pdb
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\Lectue3_task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\Lectue3_task.AssemblyInfoInputs.cache
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\Lectue3_task.AssemblyInfo.cs
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\Lectue3_task.csproj.CoreCompileInputs.cache
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\Lectue3_task.dll
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\refint\Lectue3_task.dll
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\Lectue3_task.pdb
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\Lectue3_task.genruntimeconfig.cache
+C:\Users\s31018\RiderProjects\ConsoleApp1\Lectue3_task\obj\Debug\net8.0\ref\Lectue3_task.dll
