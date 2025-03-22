@@ -2,15 +2,31 @@
 
 public abstract class Container
 {
-    protected double mass;
+    public double mass;
     private int height; //cm
     protected double tareWeight; //kg
     protected double cargoWeight;
     private int depth;
-    protected String serealNumber;
-    private int count=1;
+    public String serealNumber;
+    private static int count=1;
     protected double maxPayload; //kg
     protected SortedDictionary<String, double> payload; // name - mass
+    // 
+    // products with temperatures
+    protected Dictionary<string, double> productTemperatures = new Dictionary<string, double>()
+    {
+        { "Bananas", 13.3 },
+        { "Chocolate", 18 },
+        { "Fish", 2 },
+        { "Meat", -15 },
+        { "Ice cream", -18 },
+        { "Frozen pizza", -30 },
+        { "Cheese", 7.2 },
+        { "Sausages", 5 },
+        { "Butter", 20.5 },
+        { "Eggs", 19 }
+    };
+    
 
     public Container(double mass, int height, double tareWeight, int depth, double maxPayload, char type)
     {
@@ -53,6 +69,11 @@ public abstract class Container
         tokens[1] = type.ToUpper();
         serealNumber = tokens[0]+"-"+tokens[1]+"-"+tokens[2];
     }
+
+    public override string ToString()
+    {
+        return $"Number: {serealNumber} Content: {payload}";
+    }
 }
 
 class LContainer : Container , HazardNotifier
@@ -63,6 +84,7 @@ class LContainer : Container , HazardNotifier
         setType("L");
         this.isHazardous = isHazardous;
         // licquid
+        
     }
 
     public void IHazardNotifier(String serealNumber)
@@ -125,11 +147,39 @@ class GContainer : Container , HazardNotifier
 }
 class CContainer : Container
 {
-    public CContainer(double mass, int height, double tareWeight, int depth, double maxPayload, char type) : base(mass, height, tareWeight, depth, maxPayload, type)
+    private string productName;
+    private double temperature;
+    public CContainer(double mass, int height, double tareWeight, int depth, double maxPayload, char type, string productName, double temperature) : base(mass, height, tareWeight, depth, maxPayload, type)
     {
+        this.productName = productName;
+        this.temperature = temperature;
         setType("C");
         // refirigiratered
     }
+
+    public override void addCargo(String name, double weight)
+    {
+        double p_temperature=0;
+        foreach (var item in productTemperatures)
+        {
+            if (item.Key == name)
+            {
+                p_temperature = item.Value;
+                break;
+            }
+        }
+        
+        if (cargoWeight+weight < maxPayload && name == productName && p_temperature >= temperature)
+        {
+            payload.Add(name, weight);
+            cargoWeight += weight;
+            mass+=weight;
+        }
+        else
+        {
+            throw new InvalidOperationException("Bro, that would be too much. put it somewhere else or temperature or product name");
+        }
+       
+        
+    }
 }
-
-
